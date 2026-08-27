@@ -1,0 +1,21 @@
+body{
+    background-color: blue;
+}
+    .cartão{
+        margin: auto;
+        width:400px;
+        background-color:rgb(231, 231 ,231);
+        border: 1px solid gray;
+        border-radius: 10 px;
+        padding: 20px;
+
+    }
+    label{
+        width: 100%;
+    }
+    input{
+        width: 100%;
+    }
+    button{
+        background-color: antiquewhite;
+    }
