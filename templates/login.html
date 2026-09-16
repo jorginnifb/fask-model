@@ -1,20 +1,27 @@
-<html>
-    <head> 
-        <title>yessssssss</title>
-        <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
-    <body> 
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
         <div class="cartão">
-            <form>
+            <form method="POST" action="{{ url_for('login') }}">
                 <h1>login</h1>
-                <label>CPF</label>
-                <input type ="text">
-                <label>senha</label>
-                <input type="password">
+
+                {% if erro %}
+                    <p>{{ erro }}</p>
+                {% endif %}
+
+                <label for="cpf">CPF</label>
+                <input id="cpf" name="cpf" type="text" required>
+
+                <label for="senha">senha</label>
+                <input id="senha" name="senha" type="password" required>
+
                 <button type="submit">entrar</button>
             </form>
-        
-
         </div>
-        </body>
-    </head>
+    </body>
 </html>
